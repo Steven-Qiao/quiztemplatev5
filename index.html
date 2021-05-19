@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>World Geography Quiz</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	
+	<link rel="manifest" href="manifest.json" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+	
+	<link rel="icon" href="quizimages/favicon.jpg" type="image/png">
+  
+</head>
+<body onLoad="loadQuestion()">
+
+	<div id="lightbox" onclick="closeLightBox()">
+		<div id="message"></div>
+	</div>
+
+	<h2>Easy World Geography Quiz</h2>
+	<p>
+		This is a small simple quiz that tests your fundamental knowledge of the countries on this planet. You are required to choose the best alternative from the four listed below. Furthermore, this quiz would have a time limit of 3 minutes. Fortunately, if you are stuck on a question, a lifeline is there to help you, but use it wisely because it can only be used once. Bon voyage! <br /> 
+	</p>
+	
+	<span id="questionsAnswered"></span>
+
+	<div class="grid-container">
+		
+		<div class="header">
+			<div id="question">The Question</div>
+		</div>
+	  
+		<div class="left">
+		
+			<div id="countdown"></div>
+			
+			<div>
+				<div class="options" id="a" onclick="markIt('a')">A.</div>
+				<div class="options" id="b" onclick="markIt('b')">B.</div>
+				<div class="options" id="c" onclick="markIt('c')">C.</div>
+				<div class="options" id="d" onclick="markIt('d')">D.</div>
+			</div>
+			
+			<button id="lifeline" onclick="lifeLine()">Lifeline</button>
+			
+		</div> 
+	
+		
+  
+		<div class="right"> <img id="image" src="#" alt=""></div>
+  
+		<div class="footer1">
+			<button onclick="skipQuestion()" id="skipQuestion">Skip Question</button>
+		</div>
+  
+		<div class="footer2">
+			<p>Score <strong><span id="score"></span></strong> </p> 
+		</div>
+	</div>
+
+</body>
+</html>
